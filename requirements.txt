@@ -1,0 +1,7 @@
+Flask==0.10.1
+Jinja2==2.6
+Werkzeug==0.10.4
+Flask-Mandrill==0.2
+Flask-PyMongo==0.3.1
+
+

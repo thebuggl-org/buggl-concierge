@@ -1,0 +1,25 @@
+.plan{
+    background-color:  #eee;
+    padding-bottom: 2rem;
+    border-radius: 10px;
+    
+}
+.plan label{
+    color: #5F5F5F;
+}
+.plan h5{
+    margin: 0rem 0 0.656rem 0
+}
+#errores{
+    border-radius: 10px;
+    list-style-type: none;
+}
+
+#errores li{
+    float: left;
+    margin-left: 10px;
+    
+}
+.msg_valid{
+    width: 100%;
+}
