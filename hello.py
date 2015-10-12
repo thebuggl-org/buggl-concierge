@@ -45,7 +45,7 @@ def form():
     else:
         return render_template('form.html')
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
     # app.debug = True
     # app.run(host=os.getenv('IP', '0.0.0.0'),port=int(os.getenv('PORT', 8080)))
     # url_for('static/css', filename='buggl.css') 
