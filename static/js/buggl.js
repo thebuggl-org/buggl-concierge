@@ -16,8 +16,17 @@ $("#buggl_form").validate({
     errorLabelContainer: "#errores",
     wrapper: "li",
     submitHandler: function (form) {
-        alert("éxito");
-//            $("#buggl_form").submit();
+        
+        $.post( "#", { 
+            name: $("#name").val(), 
+            email:$("#email").val(),
+            trip_category:$("#trip_category").val(),
+            plan:$("input[name=plan]:checked").val()
+            
+        }).done(function( data ) {
+               $( "#container_principal" ).html( data );
+        });
+        
     },
     invalidHandler: function (event, validator) {
         // 'this' refers to the form
@@ -26,7 +35,7 @@ $("#buggl_form").validate({
             var message = errors == 1
                     ? 'You missed 1 field.'
                     : 'You missed ' + errors + ' fields. ';
-            Materialize.toast(message, 2000)
+            Materialize.toast(message, 2000);
 //            $("#errores").html(message);
             $("div.error").show();
         } else {
@@ -34,5 +43,13 @@ $("#buggl_form").validate({
         }
     }
 });
+
+
+// $("#request").onclick(function(){
+   
+// })
+    
+    
+
 //});
 
