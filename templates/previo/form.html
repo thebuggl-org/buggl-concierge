@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>        
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+        <title>Buggl</title>
+        <meta name="description" content="página de prueba para buggl">
+        <!-- CSS  -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+        <link rel=stylesheet type=text/css href="/css/materialize.css" media="screen,projection">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link href="/css/buggl.css" type='text/css' rel="stylesheet">
+    </head>
+    <body >
+        <div class="container" id="container_principal">
+            <h1>Contact this experte guide</h1>
+            <div id="errores">
+            </div>
+            <div class="row">
+                <form id="buggl_form" class="col s12">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input placeholder="Your name here" id="name" type="text"  name="name" required>
+                            <label id="name_error" class="msg_valid" for="name" data-error="Don't forget to tell us your name">Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input placeholder="Your email address" id="email" type="email"  name="email"  required>
+                            <label id='email_error' class="msg_valid" for="email" data-error="You should enter a valid email address">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input placeholder="Trip Category" id="trip_category" type="text" name="trip_category">
+                            <label for="trip_category">Trip Category</label>
+                        </div>
+                    </div>
+                    <h4>Select a plan for asking</h4>
+
+                    <div class="row">
+                        <div class="input-field col s12 m4">
+                            <div class="plan">
+                                <input name="plan" type="radio" id="basic" value="basic"/>
+                                <label for="basic">
+                                    <h5>Basic</h5>
+                                    <strong>$0</strong>
+
+                                    <ul>
+                                        <li>It is a long estabilished fact</li>
+                                        <li>That a reader will be distracted by the readable content of a page when</li>
+                                        <li>looking at its layout</li>
+                                    </ul>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="input-field col s12 m4">
+                            <div class="plan">
+                                <input name="plan" type="radio" id="premier" value="premier" />
+                                <label for="premier">
+                                    <h5>Premier</h5>
+                                    <strong>$49</strong>
+
+                                    <ul>
+                                        <li>It is a long estabilished fact</li>
+                                        <li>That a reader will be distracted by the readable content of a page when</li>
+                                        <li>looking at its layout</li>
+                                    </ul>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="input-field col s12 m4">
+                            <div class="plan">
+                                <input name="plan" type="radio" id="elite" value="elite"/>
+                                <label for="elite">
+                                    <h5>Elite</h5>
+                                    <strong>$89</strong>
+
+                                    <ul>
+                                        <li>It is a long estabilished fact</li>
+                                        <li>That a reader will be distracted by the readable content of a page when</li>
+                                        <li>looking at its layout</li>
+                                    </ul>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="request" class="btn waves-effect waves-light" type="submit">Request a guide
+
+                    </button>
+                </form>
+            </div>
+
+        </div>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="/js/materialize.min.js"></script>
+        <script type="text/javascript" src="/js/jquery.validate.js"></script>
+        <script type="text/javascript" src="/js/buggl.js"></script>
+    </body>
+</html>

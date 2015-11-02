@@ -1,0 +1,14 @@
+#primer-frame{
+    margin-top: 14rem;
+}
+.blurred-box{
+    padding: 7rem 0 8rem 0;
+    /*height: 28rem;*/
+}
+
+@media only screen and (max-width : 992px) { 
+    .steps{
+        margin-top:-15rem;
+    }
+}
+

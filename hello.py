@@ -10,9 +10,89 @@ from pymongo import MongoClient
 
 app = Flask(__name__, static_url_path='')
 
-@app.route('/')
-def hello_world():
-    return 'Hola !'
+
+
+
+
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    #retrieving form data
+    if request.method == 'POST':
+        name=request.form['name']
+        email=request.form['email']
+        destination=request.form['destination']
+        itinerary=request.form['itinerary']
+        
+        # Sending email
+        app.config['MANDRILL_API_KEY'] = 'UUs-Wadj9AtJ4fMqC45SrQ'
+        mandrill = Mandrill(app)
+        mandrill.send_email(
+        from_email='judasane@gmail.com',
+            to=[{'email': email}],
+        text='Hello'+name,
+        subject="Welcome "+name
+            )
+            
+        # Saving in database            
+        client = MongoClient(host='mongodb://test:TestBuggl@ds041633.mongolab.com:41633/buggl')
+        db = client.buggl
+    
+        result = db.entries.insert_one({
+        "name": name,
+        "email": email,
+        "destination": destination,
+        "itinerary": itinerary,
+        
+        })
+        
+        #return
+        return "Thank you "+name+". We've sent an email to: "+email+", informing you want "+itinerary+" in your trip"
+        
+    else:
+        return render_template('index.html')
+
+@app.route('/expert/',methods=['GET', 'POST'])
+def expert():
+    #retrieving form data
+    if request.method == 'POST':
+        name=request.form['name']
+        email=request.form['email']
+        destination=request.form['destination']
+        itinerary=request.form['itinerary']
+        plan=request.form['plan']
+        
+        # Sending email
+        app.config['MANDRILL_API_KEY'] = 'UUs-Wadj9AtJ4fMqC45SrQ'
+        mandrill = Mandrill(app)
+        mandrill.send_email(
+        from_email='judasane@gmail.com',
+            to=[{'email': email}],
+        text='Hello '+name,
+        subject="Welcome "+name
+            )
+            
+        # Saving in database            
+        client = MongoClient(host='mongodb://test:TestBuggl@ds041633.mongolab.com:41633/buggl')
+        db = client.buggl
+    
+        result = db.entries.insert_one({
+        "name": name,
+        "email": email,
+        "destination": destination,
+        "itinerary": itinerary,
+        "plan": plan
+        
+        
+        })
+        
+        #return
+        return "Thank you "+name+". We've sent an email to: "+email+", informing you want "+itinerary+" in your trip and you want the  "+plan+" plan"
+        
+    else:
+        return render_template('expert.html')
+
+
+
 
 @app.route('/<username>')
 def show_user_profile(username):
