@@ -98,6 +98,12 @@ def expert():
 def show_user_profile(username):
 # show the user profile for that user
     return 'Hola %s' % username
+    
+@app.route('/experts/<country>')
+def experts(country):
+# show the expert by the country
+    return render_template('experts/template.html', country=country)
+    
 
 @app.route("/hola/")
 def hola():
