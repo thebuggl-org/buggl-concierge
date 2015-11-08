@@ -4,7 +4,8 @@
     color:#777; 
     background-color: white;
     padding: 5rem 0 0 0;
-    /* z-index: 1000 !important; */
+    position: relative;
+    z-index: 2;
 }
 .blurred-box h2{
     position:relative;
@@ -66,7 +67,7 @@ nav img{
 
 #first-row{
     margin-bottom: 0 !important;
-     z-index: 0; 
+    z-index: 0; 
 }
 .image h3{
     text-shadow: 3px 2px 9px rgba(0, 0, 0, 0.7);
@@ -118,3 +119,30 @@ li{
     color:white;
 }
 
+.pr{
+    position: relative;
+    z-index: 1 !important;
+    margin:0;
+    padding: 0 !important;
+    font-size: 0;
+}
+
+.pr h4{
+    position: absolute;
+    top: 10rem;
+    width: 100%;
+    text-align: center;
+    color:white;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+    font-weight: 500;
+    margin:0;
+    padding:0 !important;
+}
+
+#first-row h4{
+    bottom:10rem !important;
+    top:auto;
+}
+.pr img{
+    width: 100%;
+}
