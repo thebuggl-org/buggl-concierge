@@ -5,12 +5,16 @@ from flask import Flask
 from flask import request
 from flask.ext.mandrill import Mandrill
 from pymongo import MongoClient
+from random import randint
 # from flask.ext.pymongo import PyMongo
 # app = Flask(__name__)
 
 app = Flask(__name__, static_url_path='')
 
 
+
+
+expertNames= ("carlos","caroline","johanne","juan","rick","tiffany")
 
 
 
@@ -102,7 +106,8 @@ def show_user_profile(username):
 @app.route('/experts/<country>')
 def experts(country):
 # show the expert by the country
-    return render_template('experts/template.html', country=country)
+    name=expertNames[randint(0,5)]
+    return render_template('experts/template.html', country=country,name=name)
     
 
 @app.route("/hola/")
