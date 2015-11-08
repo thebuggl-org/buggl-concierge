@@ -146,3 +146,12 @@ li{
 .pr img{
     width: 100%;
 }
+@media only screen and (max-width : 992px) { 
+    .pr h4{
+       top: 5rem;
+    }
+    #first-row h4{
+    bottom:5rem !important;
+    top:auto;
+}
+}
