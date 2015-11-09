@@ -27,7 +27,7 @@ $("#buggl_form").validate({
             destination: $("#destination").val()
 
         }).done(function (data) {
-            alert("Enviado");//            $("#container_principal").html(data);
+            $('#modal1').openModal();//            $("#container_principal").html(data);
         });
     },
     invalidHandler: function (event, validator) {
