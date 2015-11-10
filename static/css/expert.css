@@ -28,6 +28,10 @@
 }
 #social-expert{
     font-size: 2.5rem;
+    
+}
+#social-expert a{
+    color:white;
 }
 .blurred-box{
     font-family: 'Yantramanav', sans-serif;
