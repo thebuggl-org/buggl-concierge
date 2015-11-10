@@ -166,3 +166,11 @@ li{
         margin-bottom:3rem;
     }
 }
+
+nav ul li{
+    height:0px;
+}    
+
+#btn-nav:hover{
+    background-color:#E57373;
+}
