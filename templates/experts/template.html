@@ -53,23 +53,20 @@
                             {% endif %}                            
                         </div>
                         <div class="row">
-                            {% if name %}
-                            <img src="/img/experts/{{name}}.jpg" class="circle ">
-                            {% else %}
-                              <h1>Buggl - Concierge</h1>
-                            {% endif %}
+                            <img src="/img/experts/{{info["name"]}}.jpg" class="circle ">
+                            
                             
                             
                         </div>
-                        <h1>{{name.title()}} Page</h1>
+                        <h1>{{info["name"].title()}} Page</h1>
                         <div class="container">
-                            <h3>It's a long stablished fact that a reader will be distracted by the readable content of a page when looking at its layout</h3>
+                            <h3>{{info["description"]}}</h3>
                         </div>
                         <div id="social-expert">
-                            <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
-                            <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>
-                            <a href="https://www.linkedin.com"><i class="fa fa-linkedin"></i></a>
-                            <a href="https://www.blogger.com"><i class="fa fa-rss"></i></a>
+                            <a href="{{info["facebook"]}}"><i class="fa fa-facebook"></i></a>
+                            <a href="{{info["twitter"]}}"><i class="fa fa-twitter"></i></a>
+                            <a href="{{info["linkedin"]}}"><i class="fa fa-linkedin"></i></a>
+                            <a href="{{info["blog"]}}"><i class="fa fa-rss"></i></a>
                             
                         </div>
 

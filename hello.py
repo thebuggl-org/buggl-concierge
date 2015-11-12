@@ -16,6 +16,55 @@ app = Flask(__name__, static_url_path='')
 
 expertNames= ("carlos","caroline","johanne","juan","rick","tiffany")
 
+expertsInfo=(
+        {
+         "name":"carlos",
+         "description":"It's a long stablished fact that a reader will be distracted by the readable content of a page when looking at its Carlos",
+         "facebook":"http://www.facebook.com",
+         "twitter":"http://www.twitter.com",
+         "linkedin":"http://www.linkedin.com",
+         "blog":"http://www.blogger.com"
+        },
+        {
+         "name":"caroline",
+         "description":"It's a long stablished fact that a reader will be distracted by the readable content of a page when looking at its Caroline",
+         "facebook":"http://www.facebook.com",
+         "twitter":"http://www.twitter.com",
+         "linkedin":"http://www.linkedin.com",
+         "blog":"http://www.blogger.com"
+        },
+        {
+         "name":"johanne",
+         "description":"It's a long stablished fact that a reader will be distracted by the readable content of a page when looking at its Johanne",
+         "facebook":"http://www.facebook.com",
+         "twitter":"http://www.twitter.com",
+         "linkedin":"http://www.linkedin.com",
+         "blog":"http://www.blogger.com"
+        },
+        {
+         "name":"juan",
+         "description":"It's a long stablished fact that a reader will be distracted by the readable content of a page when looking at its Juan",
+         "facebook":"http://www.facebook.com",
+         "twitter":"http://www.twitter.com",
+         "linkedin":"http://www.linkedin.com",
+         "blog":"http://www.blogger.com"
+        },
+        {"name":"rick",
+         "description":"It's a long stablished fact that a reader will be distracted by the readable content of a page when looking at its Rick",
+         "facebook":"http://www.facebook.com",
+         "twitter":"http://www.twitter.com",
+         "linkedin":"http://www.linkedin.com",
+         "blog":"http://www.blogger.com"
+        },
+        {
+         "name":"tiffany",
+         "description":"It's a long stablished fact that a reader will be distracted by the readable content of a page when looking at its Tiffany",
+         "facebook":"http://www.facebook.com",
+         "twitter":"http://www.twitter.com",
+         "linkedin":"http://www.linkedin.com",
+         "blog":"http://www.blogger.com"
+        },
+    )
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -106,8 +155,8 @@ def show_user_profile(username):
 @app.route('/experts/<country>')
 def experts(country):
 # show the expert by the country
-    name=expertNames[randint(0,5)]
-    return render_template('experts/template.html', country=country,name=name)
+    info=expertsInfo[randint(0,5)]
+    return render_template('experts/template.html', country=country,info=info)
     
 
 @app.route("/hola/")
